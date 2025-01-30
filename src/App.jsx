@@ -2,6 +2,11 @@ import "./App.css";
 import DaisyNav from "./components/DaisyNav/DaisyNav";
 import NavBar from "./components/NavBar/NavBar";
 import PriceOptions from "./components/PriceOptions/PriceOptions";
+import LineChartComponent from './components/LineChartComponent/LineChartComponent'
+// import { LineChart } from './components/AllChart/LineChart/LineChart';
+// import BarChartComponent from './components/BarChartComponent/BarChartComponent';
+import Phones from "./components/Phones/Phones";
+
 function App() {
   // custom navbar data
   const routes = [
@@ -16,10 +21,13 @@ function App() {
     <>
       <header>
         <DaisyNav></DaisyNav>
-        {/* <NavBar routes={routes}></NavBar> */}
+        <NavBar routes={routes}></NavBar>
       </header>
       <main>
         <PriceOptions></PriceOptions>
+        
+        <LineChartComponent></LineChartComponent>
+        <Phones></Phones>
       </main>
 
       {/* footer */}

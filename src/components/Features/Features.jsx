@@ -1,27 +1,19 @@
-import { TiTickOutline } from "react-icons/ti";
-
 import PropTypes from "prop-types";
+import Feature from "../Feature/Feature";
+// import './Features.css';
 const Features = ({ features }) => {
   return (
-    <div>
+    <div className="flex flex-col flex-grow justify-center items-center">
       {
-        // feature item with tick icon
-        features.map((item, idx) => (
-            <div  key={idx} className="flex justify-center items-center">
-            <p className="flex">
-            <TiTickOutline className="text-4xl pr-2" />
-            {item}
+        features.map((feature,idx)=> <Feature key={idx} feature={feature}></Feature>)
 
-              </p>
-            </div>
-
-        ))
       }
+     
     </div>
   );
 };
 
 Features.propTypes = {
-  feature: PropTypes.object,
+  features: PropTypes.array,
 };
 export default Features;
